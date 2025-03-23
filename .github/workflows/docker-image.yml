@@ -28,4 +28,5 @@ jobs:
           password: ${{ secret.DOCKER_ACCESS_TOKEN }}
 
       - name: Push Docker image to Docker Hub
+        uses: docker/build-push-action@v3
         runs: docker push ${{ secret.DOCKER_USERNAME }}/my-testing-api:latest
